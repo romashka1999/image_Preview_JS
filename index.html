@@ -19,10 +19,35 @@
     <title>Document</title>
 </head>
 
+<style>
+    .image {
+        background-color: bisque;
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+    .real {
+        visibility: hidden;
+    }
+
+  
+
+</style>
+
 <body>
     <div class="container">
         <div id="imagePreview">
-            <input type='file' onchange="loadFile(this)" multiple />
+            <button class="btn btn-success custom">Upload Image</button>
+            <input class="real" type='file' onchange="loadFile(this)" value="upload image" />
+            <div class="image">
+
+            </div>
         </div>
         <script src="index.js"></script>
     </div>
