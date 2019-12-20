@@ -29,11 +29,18 @@
         background-size: cover;
         border-radius: 10px;
         overflow: hidden;
-
     }
 
-    .real {
+    .btn {
+        cursor: pointer;
+    }
+
+    .oldInput {
         visibility: hidden;
+    }
+
+    .container {
+        margin-top: 20px;
     }
 
   
@@ -43,8 +50,9 @@
 <body>
     <div class="container">
         <div id="imagePreview">
-            <button class="btn btn-success custom">Upload Image</button>
-            <input class="real" type='file' onchange="loadFile(this)" value="upload image" />
+            <label class="btn btn-success custom" for="inp">Upload Image</label>
+            <label class="btn btn-danger delete">delete</label>
+            <input id="inp" class="oldInput" type='file' onchange="loadFile(this)" value="upload image" />
             <div class="image">
 
             </div>

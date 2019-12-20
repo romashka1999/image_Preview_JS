@@ -14,14 +14,25 @@ const loadFile = function(fileInput) {
     }
 };
 
-const real = document.querySelector('real');
-const custom = document.querySelector('custom');
+const oldInput = document.querySelector('.oldInput');
+const custom = document.querySelector('.custom');
 
-console.log(real);
+const deleteUploadedImage = document.querySelector('.delete');
 
+deleteUploadedImage.addEventListener('click', function() {
 
-custom.addEventListener('click', function() {
-    // real.click();
-    console.log('object');
+        let newInput = document.createElement("input");
+        newInput.type = "file";
+        newInput.id = oldInput.id;
+        newInput.name = oldInput.name;
+        newInput.className = oldInput.className;
+        newInput.onchange = oldInput.onchange;
+        newInput.style.cssText = oldInput.style.cssText;
+
+        oldInput.parentNode.replaceChild(newInput, oldInput);
+
+        image.style.backgroundColor = "bisque";
 });
+
+
 
