@@ -31,7 +31,7 @@ deleteUploadedImage.addEventListener('click', function() {
 
         oldInput.parentNode.replaceChild(newInput, oldInput);
 
-        image.style.backgroundColor = "bisque";
+        image.style.backgroundImage = "";
 });
 
 
